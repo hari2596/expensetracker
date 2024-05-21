@@ -1,8 +1,8 @@
 import React from "react";
 //styles
-import "../TransactionsBody/TransactionsBody.css";
+import "../Transactions/Transactions.css";
 //hooks
-import useChartData from "../customHooks/useChartData";
+import useChartData from "../otherHooks/useChartData";
 //library
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
 

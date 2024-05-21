@@ -1,6 +1,7 @@
 import React from "react";
 import Card from '../Card/Card';
 import PieChartComp from '../PieChart/PieChart';
+import "./Apphead.css"
 
 function Apphead(props) {
   

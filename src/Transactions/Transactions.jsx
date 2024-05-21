@@ -2,7 +2,7 @@ import React from 'react';
 //styles
 import "./Transactions.css";
 //components
-import TransactionsBody from '../Transactions/Transactions';
+import TransactionsBody from './Transactions';
 
 const Transactions = () => {
     return (
