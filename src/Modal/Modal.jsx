@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 //styles
 import "./Modal.css"
-import FormButtons from '../FormButtons/FormButtons';
 import ModalForm from './ModalForm';
 
 const Modal = props => {

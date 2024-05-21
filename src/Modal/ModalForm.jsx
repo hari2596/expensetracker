@@ -12,10 +12,7 @@ const ModalForm = props => {
     //contexts
     const [money, setMoney] = useContext(MoneyContext);
     const [transactionData, setTransactionData] = useContext(TransactionsContext);
-    //check for existing data to update transaction
-    useEffect(()=> {
-        if(existingData) updateFormDataWithExistingData();
-    }, [])
+
     //states
     const [formData, setFormData] = useState({
         name: "",
@@ -24,21 +21,26 @@ const ModalForm = props => {
         category: "",
     })
     const [balanceFormData, setBalanceFormData] = useState({income: ""});
-    //functions
-    const updateFormDataWithExistingData = () => {
-        console.log(existingData)
-        const {name, date, amount, category} = existingData;
-        setFormData({
-            name: name,
-            price: amount,
-            date: date,
-            category: category
-        })
-    }
+
+    useEffect(() => {
+        if (existingData) {
+            const { name, date, amount, category } = existingData;
+            setFormData({
+                name: name,
+                price: amount,
+                date: date,
+                category: category
+            })
+        }
+    }, [existingData])
+    
+    
+
     const handleChange = evt => {
         const key = evt.target.name, value = evt.target.value;
         setFormData({...formData, [key]: value });
     }
+
     const handleSubmit = evt => {
         evt.preventDefault();
         // Edit Expense
@@ -55,7 +57,7 @@ const ModalForm = props => {
             if(newBalance < 0){
                 return alert("Out of balance");
             }else{
-                let newId = new Date / 1;
+                let newId = new Date() / 1;
                 let newTransaction = {...formData, id: newId};
                 setMoney({balance: newBalance, expenses: newExpense});
                 setTransactionData([...transactionData, newTransaction]);
