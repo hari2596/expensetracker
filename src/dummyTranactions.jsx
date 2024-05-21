@@ -1,7 +1,7 @@
 
-import foodIcon from "./Assets/food.svg";
-import movieIcon from "./Assets/movie.svg";
-import travelIcon from "./Assets/travel.svg";
+import  "./Assets/food.svg";
+import  "./Assets/movie.svg";
+import   "./Assets/travel.svg";
 
 export const dummyData = [
     {
@@ -51,5 +51,5 @@ export const dummyData = [
       price: 500,
       id: 171146023857578
     },
-    
+
   ]

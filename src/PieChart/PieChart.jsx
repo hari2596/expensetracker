@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 //styles
 import "./PieChart.css";
 //components
 import PieLabel from '../PieLabel/PieLabel';
-//contexts
-import { TransactionsContext } from '../AllContexts';
+//hooks
 import useChartData from '../otherHooks/useChartData';
-
 
 const COLORS = ['#FF9304', '#A000FF', '#FDE006'];
 
@@ -25,42 +23,42 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
 
 const PieChartComp = () => {
-    //hooks
-    const chartData  = useChartData([
-            { name: 'Entertainment', value: 0 },
-            { name: 'Food', value: 0 },
-            { name: 'Travel', value: 0 },
-        ]);
-        
-    return (
-        <div className='pieChart'>
-            <div className='pie'>
-                <ResponsiveContainer width="100%" height="100%">
-                    <PieChart width={400} height={400}>
-                    <Pie
-                        data={chartData}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={renderCustomizedLabel}
-                        outerRadius={99}
-                        fill="#8884d8"
-                        dataKey="value"
-                    >
-                        {chartData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Pie>
-                    </PieChart>
-                </ResponsiveContainer>
-            </div>
-            <div className='pieLabelsDiv'>
-                <PieLabel name="Food" color="#A000FF"/>
-                <PieLabel name="Entertainment" color="#FF9304"/>
-                <PieLabel name="Travel" color="#FDE006"/>
-            </div>
-        </div>
-    );
+  // hooks
+  const chartData = useChartData([
+    { name: 'Entertainment', value: 0 },
+    { name: 'Food', value: 0 },
+    { name: 'Travel', value: 0 },
+  ]);
+
+  return (
+    <div className='pieChart'>
+      <div className='pie'>
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart width={400} height={400}>
+            <Pie
+              data={chartData}
+              cx="50%"
+              cy="50%"
+              labelLine={false}
+              label={renderCustomizedLabel}
+              outerRadius={99}
+              fill="#8884d8"
+              dataKey="value"
+            >
+              {chartData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+      <div className='pieLabelsDiv'>
+        <PieLabel name="Food" color="#A000FF" />
+        <PieLabel name="Entertainment" color="#FF9304" />
+        <PieLabel name="Travel" color="#FDE006" />
+      </div>
+    </div>
+  );
 };
 
 export default PieChartComp;
