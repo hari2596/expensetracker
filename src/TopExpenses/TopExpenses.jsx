@@ -2,7 +2,7 @@ import React from 'react';
 //styles
 //styles
 import "../Transactions/Transactions.css";
-import TopExpenseBody from '../TopExpenseBody/TopExpenseBody';
+import TopExpenseBody from '../Expenses/Expenses';
 
 const TopExpenses = () => {
     return (
