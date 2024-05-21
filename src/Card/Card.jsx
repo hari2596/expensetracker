@@ -27,7 +27,7 @@ const Card = ({ text, value }) => {
       {modalOn && (
         <Modal
           toggleModal={toggleModal}
-          text={isExpense ? "Add Expense" : "Add Balance "}
+          text={isExpense ? "Add Expense" : "Add Balance"}
         />
       )}
     </div>
