@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 //components
 import FormButtons from '../FormButtons/FormButtons';
 //contexts
-import { MoneyContext, TransactionsContext } from '../../Contexts/AllContexts';
+import { MoneyContext, TransactionsContext } from '../AllContexts';
 //style
 
 

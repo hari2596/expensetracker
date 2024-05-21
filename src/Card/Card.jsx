@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
+import Modal from '../Modal/Modal';
 
 const Card = ({ text, value }) => {
   const [modalOn, setModalOn] = useState(false);
@@ -10,7 +11,7 @@ const Card = ({ text, value }) => {
     <div className="Card">
       <span className="cardText">
         <span>{text}:</span>
-        <span className={text === "Expense" ? "cardTextRed" : cardTextGreen}>
+        <span className={text === "Expense" ? "cardTextRed" : "cardTextGreen"}>
           {" "}
           ₹{value}{" "}
         </span>

@@ -5,7 +5,7 @@ import "./PieChart.css";
 //components
 import PieLabel from '../PieLabel/PieLabel';
 //contexts
-import { TransactionsContext } from '../../Contexts/AllContexts';
+import { TransactionsContext } from '../AllContexts';
 import useChartData from '../otherHooks/useChartData';
 
 

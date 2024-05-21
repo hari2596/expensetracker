@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 //contexts
-import { TransactionsContext } from '../../Contexts/AllContexts';
+import { TransactionsContext } from '../AllContexts';
 
 const useChartData = initialData => {
     //context
