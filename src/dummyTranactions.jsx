@@ -11,6 +11,7 @@ export const dummyData = [
       price: 50,
       id: 1711460238574
     },
+
     {
       name: "Auto",
       date: "2024-03-18",
@@ -18,6 +19,7 @@ export const dummyData = [
       price: 150,
       id: 1711460238579
     },
+
     {
       name: "Movie",
       date: "2024-03-18",
@@ -25,6 +27,7 @@ export const dummyData = [
       price: 300,
       id: 1711460238577
     },
+
     {
       name: "Bus",
       date: "2024-03-18",
@@ -32,6 +35,7 @@ export const dummyData = [
       price: 100,
       id: 17114602385755
     },
+
     {
       name: "Burger",
       date: "2024-03-18",
@@ -39,6 +43,7 @@ export const dummyData = [
       price: 100,
       id: 17114602385755
     },
+
     {
       name: "IPL Match",
       date: "2024-03-18",
@@ -46,4 +51,5 @@ export const dummyData = [
       price: 500,
       id: 171146023857578
     },
+    
   ]

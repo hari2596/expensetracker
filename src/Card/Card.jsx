@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import Modal from '../Modal/Modal';
+import "./Card.css"
 
 const Card = ({ text, value }) => {
   const [modalOn, setModalOn] = useState(false);

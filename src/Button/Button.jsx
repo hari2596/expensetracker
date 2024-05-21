@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Button.css"
 
 function Button(props) {
     const {text, background, buttonSize , icon , clickFunction, buttonType} =props;
